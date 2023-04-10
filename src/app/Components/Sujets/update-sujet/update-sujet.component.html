@@ -1,0 +1,67 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-md-6 offset-md-3">
+    <h3>Mise à jour de Sujet numéro{{sujet.idSujet}}:</h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label> Titre </label>
+            <input type="text" class="form-control" id="titre" 
+                  [(ngModel)]="sujet.titre" name="titre">
+        </div>   
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" class="form-control" id="description"
+                 [(ngModel)]="sujet.description" name="description"> 
+        </div>    
+            
+        <div class="form-group">
+            <label>Specialité</label>
+            <select class="form-control" id="specialite"
+                 [(ngModel)]="sujet.specialite" name="specialite" >
+
+                    <option value="infotronique">Infotronique</option>
+                    <option value="Mecatronique">Mecatronique</option>
+                    <option value="Gsil">Gsil</option>
+                    <option value="informatique">Informatique</option>
+           </select>
+       </div>   
+       <div class="form-group">
+              <label>Encadrant</label>
+              <input type="text" class="form-control" id="encadrant"
+                    [(ngModel)]="sujet.encadrant" name="encadrant"> 
+      </div>   
+      
+      <div class="form-group">
+        <label>Email Encadrant</label>
+        <input type="text" class="form-control" id="encadrant"
+              [(ngModel)]="sujet.email_encadrant" name="encadrant"> 
+     </div>  
+      <br>
+      <button class="btn btn-primary btn-lg active" type="submit">Mise a jour le sujet numero {{sujet.idSujet}}</button>
+                
+        
+      </form>
+    </div>
+
+    <br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© 2022 Bootstrapious All rights reserved  @JavaGuides</p>
+    </div>
+  </div>
+

@@ -1,0 +1,120 @@
+<br>
+<br>
+<br>
+
+
+<div class="container py-3">
+
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    </div>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-6 fw-normal">Details de Sujet</h1>
+        <p class="fs-5 text-muted">Ici vous trouverez tous les details necessaires de sujet 
+            numéro: {{sujet.idSujet}} avec les details d'encadrant(e) .
+            Vous pouvez le contacter par Mail et pour plus 
+            d'informations contacter l'administration ou le Chef Departement.</p>
+      </div>
+
+<br>
+
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-2">
+          <h4 class="my-0 fw-normal">Sujet</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">Id<small class="text-muted fw-light">/{{sujet.idSujet}}</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><label><b> Titre: </b></label> {{sujet.titre}}</li>
+            <li><label><b> Description: </b></label> {{sujet.description}}</li>
+            <li><label><b> Specialité: </b></label> {{sujet.specialite}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          
+          <div class="card-body">
+            
+            <img src="assets/assets/img/a1.png" >
+            <button  type="button" class="btn btn-warning btn-lg "  (click)="addToCart()">Ajouter ce Sujet a la Liste de mon choix</button>
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-2">
+          <h4 class="my-0 fw-normal">Encadrant(e)</h4>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title">Id<small class="text-muted fw-light">Sujet/{{sujet.idSujet}}</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><label><b> Encadrant: </b></label> {{sujet.encadrant}}</li>
+            <li><label><b> Email Encandrant: </b></label> {{sujet.email_encadrant}}</li>
+            <li><label><b> Specialité: </b></label> {{sujet.specialite}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- <button  type="button" class="btn btn-warning btn-lg " style="margin-left: 600px;" (click)="addToCart()">Ajouter ce Sujet a la Liste de mon choix</button> -->
+
+
+
+
+
+
+
+
+<!-- 
+<div>
+    <div>
+        <label><b> Encadrant: </b></label> {{sujet.encadrant}}
+    </div>
+    <div>
+        <label><b> Email Encandrant: </b></label> {{sujet.email_encadrant}}
+    </div>
+    <div>
+        <label><b> Departement: </b></label> {{sujet.id}}
+    </div> 
+    <div>
+        <label><b> Titre: </b></label> {{sujet.titre}}
+    </div>
+    <div>
+        <label><b> Description: </b></label> {{sujet.description}}
+    </div>
+    <div>
+        <label><b> Specialité: </b></label> {{sujet.specialite}}
+    </div>
+</div> -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© 2022 Bootstrapious All rights reserved  @JavaGuides</p>
+    </div>
+  </div>
+
+

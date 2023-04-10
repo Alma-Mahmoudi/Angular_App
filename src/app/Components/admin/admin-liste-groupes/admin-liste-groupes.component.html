@@ -1,0 +1,103 @@
+
+<br>
+<br>
+<br>
+<br>
+
+<h3 style="text-align: center;">Liste des groupes Inscrits</h3>
+
+<div style=" display: block;
+margin-left: auto;
+margin-right: auto;" class="row">
+  <div class="col-12">
+     <div style="text-align: cneter;margin-top: 50px;">
+       <div class="col-3" style="display: inline-block;cursor:pointer;margin-left: 560px;">
+        <a (click)="exportUsersPdf()" ><img style=" display: block;
+          margin-left: auto;
+         " src="assets/assets/img/pdf1.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container py-1" style="margin:5% auto;">
+<div class="card-body px-0 pb-2">
+    <div class="table-responsive p-0">
+      <table class="table align-items-center justify-content-center mb-0">
+        <thead>
+          <tr>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Logo</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nom de Groupe</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mot de Passe</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Specialite</th>
+            <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Role</th> -->
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Action</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of users">
+            <td>
+              <div class="d-flex px-2">
+                <div>
+                  <img src="assets/assets/img/user.png" class="avatar avatar-sm rounded-circle me-2"
+                    alt="spotify">
+                </div>
+                <div class="my-auto">
+                  <h6 class="mb-0 text-sm"></h6>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0">{{i.userId}}</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0">{{i.username}}</p>
+            </td>
+            <td>
+              <p class="text-sm font-weight-bold mb-0">{{i.email}}</p>
+            </td>
+            <td>
+                <p class="text-sm font-weight-bold mb-0">{{i.password}}</p>
+            </td>
+            <td>
+                <p class="text-sm font-weight-bold mb-0">{{i.specialite}}</p>
+            </td>
+            <!-- <td>
+              <p class="text-sm font-weight-bold mb-0">{{i.role}}</p>
+            </td> -->
+            
+
+            <td class="align-middle text-center">
+              <div class="d-flex align-items-center justify-content-center">
+                <div>
+                  <button type="button" class="btn btn-info "  (click)="edit(i.userId)">Edit</button>
+                  <!-- <button type="button" class="btn btn-danger" (click)="display(i.userId)" >Display</button> -->
+                  <button type="button" class="btn btn-success" (click)="delete(i.userId)" >Delete</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© 2022 Bootstrapious All rights reserved  @JavaGuides</p>
+    </div>
+  </div>
+

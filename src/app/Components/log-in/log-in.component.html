@@ -1,0 +1,70 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container mt-7">
+    <div class="row justify-content-md-center">
+        <!--<div class="col-md-7">-->
+            <!-- <div class="alert alert-danger" *ngIf="erreur==1">
+                <strong>login ou mot de passe erronés..</strong>
+            </div> -->
+    
+               
+            <div class="alert alert-danger" *ngIf="erreur==1">
+                <strong>Email ou mot de passe erronés..</strong>
+            </div>
+                
+
+
+
+                <form   class="login-email" #loginForm="ngForm"
+                (ngSubmit)="onSubmit()">
+                               
+                    <p class="login-text" style="font-size: 2rem; font-weight: 800;">Se connecter</p>
+                               
+                           <div class="input-group">
+                               <input type="email" placeholder="E-mail" 
+                                name="email"  required class="form-control"
+                                [(ngModel)]="user.email"
+                                [ngModelOptions]="{ standalone: true }">
+                           </div>
+
+
+                           <div class="input-group">
+                                    <input type="password" placeholder="Mot de passe" name="password" value="text" 
+                                    required placeholder="password"
+                                    [(ngModel)]="user.password"
+                                    [ngModelOptions]="{ standalone: true }" >
+                           </div>
+
+                           <div class="form-check form-switch d-flex align-items-center mb-3" >
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="rememberMe" />
+                            <label class="form-check-label mb-0 ms-2" for="rememberMe"
+                                >Se souvenir de moi</label
+                            >
+                            </div>
+                           
+                            <div class="input-group">
+                                    <button name="submit" class="btn" (click)=" onSubmit()">Se connecter</button>
+                            </div>
+
+                            <div class="input2-group">
+                                <button type="button" (click)="CreateAccount()" name="submit" class="btn">Créer un compte</button>
+                            </div>
+
+                               <!-- <p class="login-register-text">vous avez oublié votre mot de passe? <a href="#">Register Here</a>.</p>-->
+              
+              
+              </form>
+      
+</div>
+
+</div>
+
+

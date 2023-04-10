@@ -1,0 +1,97 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container py-3" style="margin:0.1% auto;">
+
+<div class="container">
+    <div class="row">
+        <div class="search-hero">
+            <input  class="form-control me-1"type="text" name="search" [(ngModel)]="searchText" placeholder="Recherche par identifiant, par nom projet ou par nom encadrant">
+        </div>
+    </div>
+</div>
+<br>
+<table class ="table table-stripped">
+    <thead>
+          <tr>
+              <th>Id</th>
+              <th>Titre</th>
+              <th>Description</th>
+              <th>Specialité</th>
+              <th>Encadrant</th>
+              <th>Email Encadrant</th>
+              <th>Actions</th>
+              <!-- <th *ngIf="!(authService.isAdmin())">ADD</th> -->
+              <!-- <th>Ajouter</th> -->
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sujet of sujets | filter:searchText ; index as i">
+               
+               <td> {{ sujet.idSujet }} </td>
+               <td> {{ sujet.titre }} </td>
+               <td> {{ sujet.description }} </td>
+               <td> {{ sujet.specialite }} </td>
+               <td> {{ sujet.encadrant }} </td>
+               <td> {{ sujet.email_encadrant }} </td>
+               
+               <!-- <td>
+                   <button *ngIf="authService.isAdmin()" (click) = "updateSujet(sujet.idSujet)" class="btn btn-info">Update</button>
+                   <button *ngIf="authService.isAdmin()" (click) = "deleteSujet(sujet.idSujet)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                   <button (click) = "sujetDetails(sujet.idSujet)" class="btn btn-info" style="margin-left: 10px;">View</button>
+               </td> -->
+               <td>
+                <button (click) = "sujetDetails(sujet.idSujet)" class="btn btn-success" >View</button>
+                <button  (click) = "updateSujet(sujet.idSujet)" class="btn btn-info">Update</button>
+                <button  (click) = "deleteSujet(sujet.idSujet)" class="btn btn-danger" >Delete</button>
+            </td>
+               <td>
+                     <button  type="button" class="btn btn-block btn-light global--btn-size" style="margin-left: 15px;"(click) = "sujetDetails(sujet.idSujet)" >Add to my List</button>
+                     <!-- <button *ngIf="!(authService.isAdmin()) && add !==i" type="button" class="btn btn-block btn-light global--btn-size" style="margin-left: 15px;">Add to my List</button> -->
+                     <!-- <div *ngIf="add == i">
+                         <input type="number" class="form-control" placeholder="sujet numero:" #amount>
+                         <button class="btn btn-primary" (click)="add1(amount.value)">add</button>
+                    </div> -->
+               </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<h3 style="text-align: center;">Liste des sujets PDF</h3>
+
+<div style=" display: block;
+margin-left: auto;
+margin-right: auto;" class="row">
+  <div class="col-12">
+     <div style="text-align: cneter;margin-top: 50px;">
+       <div class="col-3" style="display: inline-block;cursor:pointer;margin-left: 560px;">
+        <a (click)="exportUsersPdf1()" ><img style=" display: block;
+          margin-left: auto;
+          margin-right: auto;" src="assets/assets/img/pdf1.png"></a>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+</div>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<div class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© 2022 Enicarthage  @PFA</p>
+    </div>
+  </div>
+

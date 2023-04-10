@@ -1,0 +1,57 @@
+
+<br>
+<br>
+<br>
+<br>
+
+
+<h3 style="text-align: center;">Liste des etudiants de l'Enicarthage</h3>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th> id</th>  
+          <th> Nom</th>  
+          <th> Prénom</th> 
+          <th> Adresse</th> 
+          <th> Specialite</th>  
+          <th> Moyenne</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.nom}}</td>
+            <td>{{student.prenom}}</td>
+            <td>{{student.adr}}</td>
+            <td>{{student.specialite}}</td>
+            <td>{{student.score}}</td>
+        </tr>
+
+    </tbody>
+</table>
+<!-- <div>Choix des étudiants</div>
+<select [(ngModel)]="firstselected">
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+
+<div>{{firstselected}}</div>
+
+<select [(ngModel)]="secondselected" >
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+
+<select [(ngModel)]="thirdselected" >
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+
+<select [(ngModel)]="fourthselected">
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+ -->
+
+

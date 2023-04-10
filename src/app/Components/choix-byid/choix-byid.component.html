@@ -1,0 +1,140 @@
+<br>
+<br>
+<div class="container py-1" style="margin:5% auto;">
+  <h3 style="text-align: center;">Ma liste de choix</h3>
+
+
+<!-------Les choix des binomes -------------------------------------------------------------------------------------------->
+<h5>&#187; Choix des binomes :</h5>
+<br>
+Etudiant1
+<select>
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+
+Etudiant2
+<select  >
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+<br>
+<br>
+Etudiant3
+<select>
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+Etudiant4
+<select>
+    <option value="0"></option>
+    <option *ngFor="let student of students" value="{{student.id}}">{{student.id}}  {{student.nom}}  {{student.prenom}}  {{student.specialite}}</option>
+</select>
+
+
+
+<!-------Les choix des Sujets ----------------------------------------------------------------------------------------------------------->
+<br>
+<br>
+<h5>&#187; Choix des sujets : </h5>
+
+<p class="text-danger">Ne pas depasser 5 sujets maximum</p>
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Noms Binomes</th>
+        <th>Num</th>
+        <th>Id-Sujet</th>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Specialité</th>
+        <th>Encadrant</th>
+        <th>Email-Encadrant</th>
+        <th>Action</th>
+        
+
+
+
+
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+
+
+        
+      <tr class="table-info" *ngFor="let item of choixItems; let i = index">
+        <td>-{{ item.nomEtudiant1 }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.sujet.idSujet }}</td>
+        <td>{{ item.sujet.titre  }}</td>
+        <td>{{ item.sujet.description  }}</td>
+        <td>{{ item.sujet.specialite }}</td>
+        <td>{{ item.sujet.encadrant }}</td>
+        <td>{{ item.sujet.email_encadrant }}</td>
+        <td>
+                <button (click)="Delete(item.sujet.idSujet)"  class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+        </td>
+    
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+  <button  (click)="ajouterSujet()" class="btn btn-info " style="margin-left: 10px;">Ajouter un autre sujet</button>
+  <button type="button" class="btn btn-success" style="margin-left: 10px;" (click)="valider(user.userId)">Valider Mon Choix</button>
+
+
+  <br>
+<br>
+<br>
+
+
+</div>
+
+
+
+
+
+<!-- 
+<p>---------------</p> 
+<p>Pour tester add</p>
+<tbody *ngFor="let item of choixItems; let i = index">
+
+    <p >{{ item.quantity }}</p>
+    <p >{{ item.sujet.titre  }}</p>
+    <p >{{ item.sujet.description  }}</p>
+
+    <p >{{ item.sujet.description  }}</p>
+    
+</tbody> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0 py-2">© 2022 Bootstrapious All rights reserved  @JavaGuides</p>
+    </div>
+</div>
